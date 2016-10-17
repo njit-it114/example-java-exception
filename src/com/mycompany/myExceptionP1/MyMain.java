@@ -120,10 +120,24 @@ public class MyMain {
 		}
 	}
 	
-//	public static void useMethod6(Integer _inp) {
-//	MyMain m = new MyMain();
-//	m.method1(_inp);
-//}
+	public static void useMethod6(Integer _inp) throws MyException1 {
+	MyMain m = new MyMain();
+	try {
+		m.method1(_inp);
+	} catch (MyException1Child e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (MyException1 e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (MyException2 e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		// NOTE can wrap an Exception ( Throwable) into another Exception via its constructor like below
+		MyException1 e1 = new MyException1("got MyException2 " + e.getMessage(), e);
+		throw e1;
+	}
+}
 
 	
 //	public static void useMethod7(Integer _inp) {
