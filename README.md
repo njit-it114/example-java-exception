@@ -5,6 +5,7 @@ Example Java project created via STS as Java Project, showing how to;
 - throw ing checked Exceptions (Main.method1), 
 - handle checked Exceptions thrown by called methods via either via try/catch or throws (MyMain.useMethod1,2,3,4,5), 
 - how checked Exception inheritance can be used in overwriting methods in Child classes that throws these Exceptions,
+- how to wrap an Exception into another Exception (via its constructor that takes a Throwable) and throw that
 
 ## Setup dependencies
 Make sure on your machine, you have;
