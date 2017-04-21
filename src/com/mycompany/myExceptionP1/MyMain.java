@@ -27,6 +27,8 @@ public class MyMain {
 
 	}
 
+//	public void method1(Integer _inp) throws MyException2, MyException1Child {
+// NOTE ilker above is wrong. Have to declare all checked exceptions
 	public void method1(Integer _inp) throws MyException1, MyException2, MyException1Child {
 		switch (_inp) {
 		case 1:
